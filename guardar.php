@@ -6,7 +6,7 @@ include "conexion.php";
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
 $marca = $_POST['marca'];
-$descripcion = $_POST['descripcion'];
+$descripcion = $_POST['descripciones'];
 
 // Almacena la direccion temporal del archivo
 $imagen_dir = $_FILES['foto']['tmp_name'];
