@@ -11,7 +11,7 @@ $SQL = "SELECT * FROM usuario
 echo $SQL;
 
 $con->prepare("SELECT * FROM usuario 
-        WHERE usuario=? AND contrasena='$contrasena'")
+        WHERE usuario=? AND contrasena='$contrasena'");
 
 $respuesta = $con->query($SQL);
 
