@@ -10,9 +10,9 @@
 <body>
     <form action="sesiones.php" method="post">
         <label for="">usuario</label>
-        <input type="text">
+        <input type="text" name="usuario">
         <label for="">contraseña</label>
-        <input type="password">
+        <input type="password" name="contra">
 
         <button type="submit">Iniciar sesion</button>
     </form>
