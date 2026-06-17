@@ -5,8 +5,8 @@ if (!isset($_SESSION['usuario']) ){
     header("location:inicio_sesion.php");
 }
 
-print_r( $_SESSION["usuario"] );
-echo session_id();
+// print_r( $_SESSION["usuario"] );
+// echo session_id();
 ?>
 
 <!DOCTYPE html>

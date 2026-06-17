@@ -10,12 +10,14 @@ $SQL = "SELECT * FROM usuario
 
 echo $SQL;
 
-$con->prepare("SELECT * FROM usuario 
-        WHERE usuario=? AND contrasena='$contrasena'");
+$stmt = $con->prepare("SELECT * FROM usuario 
+       WHERE usuario=? AND contrasena=?");
+$stmt->bind_param('ss', $usuario, $contrasena);
+$stmt->execute();
+$respuesta = $stmt->get_result();
+// $respuesta = $con->query($SQL);
 
-$respuesta = $con->query($SQL);
-
-echo $SQL;
+//echo $SQL;
 if($respuesta->num_rows > 0){
         $_SESSION["usuario"] = $respuesta->fetch_assoc();
        // header('location:formlario.php');
